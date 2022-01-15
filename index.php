@@ -1,29 +1,32 @@
 
-<?php
-    //variables
-    $f_name = $_POST['f-Name'];
-    $l_name = $_POST['l-Name'];
-?>
 
 <html>
     <head>
         <title>php tutorial</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="error-frame">
+            <span>this is error content !</span>
+        </div>
 
-        <?php
-            if(isset($f_name) && $f_name !== '' && isset($l_name) && $l_name !== '') {
-        ?>
-            <p>information sended succesfull ! your information is :</p>
-            <p>your first name is : <?php echo $f_name ?></p>
-            <p>your last name is : <?php echo $l_name ?></p>
-
-        <?php } else { ?>
         <form action="" method="post" autocomplete="FALSE">
             <input type="text" name="f-Name" placeholder="enter your first name">
             <input type="text" name="l-Name" placeholder="enter your last name">
+            
+            <div class="radio-frame">
+                <span>Gender :</span>
+                <input type="radio" name="gender" value="Male" id="radio-male">
+                <label for="radio-male">Male</label><br>
+                <input type="radio" name="gender" value="Female" id="radio-female">
+                <label for="radio-female">Female</label><br>
+                <input type="radio" name="gender" value="Other" id="radio-other">
+                <label for="radio-other">Other</label><br>   
+            </div>
+            
+
             <input type="submit" value="Submit">
+
         </form>
-        <?php }?>
     </body>
 </html>

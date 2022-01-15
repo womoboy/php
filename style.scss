@@ -1,0 +1,48 @@
+//imports
+@import "reset";
+
+//variables
+$c_whitesmoke: whitesmoke;
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.error-frame {
+    width: fit-content;
+    height: fit-content;
+    background-color: orange;
+    color: white;
+    padding: 0.5em;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    box-shadow: 0 0 1em gray;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: $c_whitesmoke;
+    padding: 1em;
+    box-shadow: 0 0 1em gray;
+
+    input[type="text"] {
+        width: 100%;
+        height: fit-content;
+        padding: 0.5em;
+        margin: 0.5em 0;
+    }
+
+    .radio-frame {
+        display: flex;
+        justify-content: space-evenly;
+        place-items: center;
+    }
+
+    input[type="submit"] {
+        margin: 1em 0;
+        padding: 0.5em;
+    }
+}
