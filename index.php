@@ -7,7 +7,18 @@
     </head>
     <body>
         <div class="error-frame">
-            <span>this is error content !</span>
+            <?php
+                $x = 5;
+                
+                function myTest() {
+                    //global $x;
+                    $y = $GLOBALS['x'];
+                    echo "the number is :" . $y . "<br>";
+                }
+                myTest();
+                echo "the number is :" . $x;
+            ?>
+
         </div>
 
         <form action="" method="post" autocomplete="FALSE">
@@ -23,10 +34,7 @@
                 <input type="radio" name="gender" value="Other" id="radio-other">
                 <label for="radio-other">Other</label><br>   
             </div>
-            
-
             <input type="submit" value="Submit">
-
         </form>
     </body>
 </html>

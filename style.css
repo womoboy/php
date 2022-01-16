@@ -21,11 +21,10 @@ body {
   height: fit-content;
   background-color: orange;
   color: white;
-  padding: 0.5em;
   position: fixed;
   top: 30px;
   left: 30px;
-  box-shadow: 0 0 1em gray;
+  box-shadow: 0 0 1em #858585;
 }
 
 form {
@@ -34,7 +33,8 @@ form {
   width: 300px;
   background-color: whitesmoke;
   padding: 1em;
-  box-shadow: 0 0 1em gray;
+  box-shadow: 0 0 1em #858585;
+  border-radius: 1em;
 }
 form input[type=text] {
   width: 100%;
@@ -48,8 +48,19 @@ form .radio-frame {
   place-items: center;
 }
 form input[type=submit] {
+  background: none;
+  outline: none;
+  border: none;
+  border: 1px solid #858585;
+  color: #858585;
+  border-radius: 1em;
   margin: 1em 0;
   padding: 0.5em;
+}
+form input[type=submit]:hover {
+  color: white;
+  border: 1px solid black;
+  background-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
