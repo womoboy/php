@@ -8,15 +8,14 @@
     <body>
         <div class="error-frame">
             <?php
-                $x = 5;
-                
-                function myTest() {
-                    //global $x;
-                    $y = $GLOBALS['x'];
-                    echo "the number is :" . $y . "<br>";
+                function addNum(){
+                    static $x = 0;
+                    echo $x;
+                    $x++;
                 }
-                myTest();
-                echo "the number is :" . $x;
+                addNum();
+                addNum();
+                addNum();
             ?>
 
         </div>
