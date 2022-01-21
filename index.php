@@ -8,19 +8,20 @@
     <body>
         <div class="error-frame">
             <?php
-                function addNum(){
-                    static $x = 0;
-                    echo $x;
-                    $x++;
-                }
-                addNum();
-                addNum();
-                addNum();
+                $x = "hello world!";
+                $y = 249;
+                $n = 10.5;
+
+                var_dump($x);
+                echo "<br>";
+                var_dump($y);
+                echo "<br>";
+                var_dump($n);
             ?>
 
         </div>
 
-        <form action="" method="post" autocomplete="FALSE">
+        <form action="<?php ?>" method="post" autocomplete="FALSE">
             <input type="text" name="f-Name" placeholder="enter your first name">
             <input type="text" name="l-Name" placeholder="enter your last name">
             
