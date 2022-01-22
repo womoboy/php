@@ -8,17 +8,12 @@
     <body>
         <div class="error-frame">
             <?php
-                $x = "2323";
-                $y = 12.6;
+                define("SEND", "Sended is successful");
+                function SendMassage(){
+                    echo SEND;
+                }
 
-                var_dump($x);
-                echo "<br>";
-                var_dump($y);
-                echo "<br>";
-                var_dump((int)$x);
-                echo "<br>";
-                var_dump((int)$y);
-                echo "<br>";
+                SendMassage();
             ?>
 
         </div>
