@@ -8,26 +8,17 @@
     <body>
         <div class="error-frame">
             <?php
-                Class Car {
-                    public $carName;
-                    public $carColor;
+                $x = "2323";
+                $y = 12.6;
 
-                    public function __construct($carName, $carColor) {
-                        $this->name = $carName;
-                        $this->color = $carColor;
-                    }
-
-                    public function massage() {
-                        echo "my car is :" . $this->name . " " . $this->color;
-                    }
-                }
-
-                $name = "bmw";
-                $color = "red";
-
-                $car_01 = new Car($name, $color);
-                echo $car_01 -> massage();
-
+                var_dump($x);
+                echo "<br>";
+                var_dump($y);
+                echo "<br>";
+                var_dump((int)$x);
+                echo "<br>";
+                var_dump((int)$y);
+                echo "<br>";
             ?>
 
         </div>
