@@ -8,16 +8,14 @@
     <body>
         <div class="error-frame">
             <?php
-                $user = "";
-                empty($user) ? textTrue() : textFlase();
-                function textTrue() {
-                    echo "user not find";
+                $x = 1;
+                if ($x == 0) {
+                    echo "number is zero";
+                } else if($x < 0) {
+                    echo "number is negative";
+                } else {
+                    echo "number is postive";
                 }
-
-                function textFlase() {
-                    echo "user is ready";
-                }
-                
             ?>
 
         </div>
