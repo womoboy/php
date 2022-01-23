@@ -9,12 +9,13 @@
         <div class="error-frame">
             <?php
                 $x = 1;
-                if ($x == 0) {
-                    echo "number is zero";
-                } else if($x < 0) {
-                    echo "number is negative";
-                } else {
-                    echo "number is postive";
+                while ($x > 0) {
+                    $x++;
+                    echo $x . "<br>";
+                    if ($x == 10){
+                        echo "program is ended";
+                        break;
+                    }
                 }
             ?>
 
