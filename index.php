@@ -8,15 +8,16 @@
     <body>
         <div class="error-frame">
             <?php
-                $x = 10;
-                $y = 11;
+                $user = "";
+                empty($user) ? textTrue() : textFlase();
+                function textTrue() {
+                    echo "user not find";
+                }
 
-                var_dump($x <=> $y);
-                echo "<br>";
-                var_dump($y <=> $x);
-                echo "<br>";
-                var_dump($x <=> $x);
-                echo "<br>";
+                function textFlase() {
+                    echo "user is ready";
+                }
+                
             ?>
 
         </div>
