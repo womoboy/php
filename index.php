@@ -8,15 +8,13 @@
     <body>
         <div class="error-frame">
             <?php
-                $x = 1;
-                while ($x > 0) {
-                    $x++;
-                    echo $x . "<br>";
-                    if ($x == 10){
-                        echo "program is ended";
-                        break;
+                $x = array("Amir", "Reza", "Rostam");
+                if(sizeof($x) !== 0){
+                    foreach($x as $value){
+                        echo $value . "<br>";
                     }
-                }
+                } 
+                
             ?>
 
         </div>
