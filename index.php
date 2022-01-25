@@ -8,15 +8,15 @@
     <body>
         <div class="error-frame">
             <?php
-                $space = ' ';
+                $cars = array();
+                $cars[0] = 'NGIM';
+                $cars[1] = 'MMo';
+                $cars[2] = 'ACim';
 
-                function showNum(string $x, string $y): string {
-                    global $space;
-                    $z = $x . $space . $y . " ! ";
-                    return $z;
+                foreach ($cars as $value){
+                    var_dump($value);
+                    echo "<br>";
                 }
-            
-                echo showNum("Hello", "World");
             ?>
 
         </div>
