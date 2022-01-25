@@ -8,19 +8,18 @@
     <body>
         <div class="error-frame">
             <?php
-                $user = array("Peter" => "30", "John" => "19", "Alex" => "29");
-                $user_count = sizeof($user);
-
-                for($i = 0; $i < $user_count; $i++){
-                    echo array_keys($user)[$i] . ' ' . $user[array_keys($user)[$i]] . "<br>";
-                }
+                $cars = array("BMW" => "Red", "Benz" => "Black", "Vovo" => "Blue");
+                $cars_counter = count($cars);
 
                 /*
-                foreach($user as $name => $age){
-                    echo $name . ' ' .$age . "<br>";
+                foreach($cars as $carName => $carColor){
+                    echo $carName . ' ' . $carColor . '<br>';
                 }
                 */
-                
+
+                for($i = 0; $i < $cars_counter; $i++){
+                    echo array_keys($cars)[$i] . ' ' . $cars[array_keys($cars)[$i]] . '<br>';
+                }
             ?>
 
         </div>
