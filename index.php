@@ -8,12 +8,15 @@
     <body>
         <div class="error-frame">
             <?php
-                
-                function show_text(int $x, string $y){
-                    echo $x . ' ' . $y;
-                }
+                $space = ' ';
 
-                show_text(5, "Gerdoo vojood dre");
+                function showNum(string $x, string $y): string {
+                    global $space;
+                    $z = $x . $space . $y . " ! ";
+                    return $z;
+                }
+            
+                echo showNum("Hello", "World");
             ?>
 
         </div>
