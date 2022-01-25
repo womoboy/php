@@ -1,4 +1,4 @@
-
+<?php declare(strict_types=1);?>
 
 <html>
     <head>
@@ -8,13 +8,12 @@
     <body>
         <div class="error-frame">
             <?php
-                $x = array("Amir", "Reza", "Rostam");
-                if(sizeof($x) !== 0){
-                    foreach($x as $value){
-                        echo $value . "<br>";
-                    }
-                } 
                 
+                function show_text(int $x, string $y){
+                    echo $x . ' ' . $y;
+                }
+
+                show_text(5, "Gerdoo vojood dre");
             ?>
 
         </div>
