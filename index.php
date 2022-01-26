@@ -8,17 +8,20 @@
     <body>
         <div class="error-frame">
             <?php
-                $cars = array("BMW" => "Red", "Benz" => "Black", "Vovo" => "Blue");
-                $cars_counter = count($cars);
+                $cars = array(
+                    array('BMW', 10, 8),
+                    array('Benz', 15, 9),
+                    array('Volvo', 4,3),
+                    array('Mak', 7, 4)
+                );
 
-                /*
-                foreach($cars as $carName => $carColor){
-                    echo $carName . ' ' . $carColor . '<br>';
-                }
-                */
-
-                for($i = 0; $i < $cars_counter; $i++){
-                    echo array_keys($cars)[$i] . ' ' . $cars[array_keys($cars)[$i]] . '<br>';
+                for ($row = 0; $row < 4; $row++) {
+                    echo "<p><b>Row number $row</b></p>";
+                    echo "<ul>";
+                    for ($col = 0; $col < 3; $col++) {
+                        echo "<li>".$cars[$row][$col]."</li>";
+                    }
+                    echo "</ul>";
                 }
             ?>
 
