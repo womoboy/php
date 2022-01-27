@@ -9,20 +9,24 @@
         <div class="error-frame">
             <?php
                 $cars = array(
-                    array('BMW', 10, 8),
-                    array('Benz', 15, 9),
-                    array('Volvo', 4,3),
-                    array('Mak', 7, 4)
+                    array('BMW', 'Red', '1392'),
+                    array('FordMustang', 'Black', '1969'),
+                    array('Benz', 'Blue', '2020'),
+                    array('Mack', "white", '2022')
                 );
 
-                for ($row = 0; $row < 4; $row++) {
-                    echo "<p><b>Row number $row</b></p>";
+                for ($i = 0; $i < count($cars); $i++){
+                    echo "<p>The Array $i</p>";
                     echo "<ul>";
-                    for ($col = 0; $col < 3; $col++) {
-                        echo "<li>".$cars[$row][$col]."</li>";
+                    for ($x = 0; $x < 3; $x++){
+                        echo "<li>";
+                        echo $cars[$i][$x];
+                        echo "</li>";
                     }
                     echo "</ul>";
+                    
                 }
+
             ?>
 
         </div>
