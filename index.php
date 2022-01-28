@@ -8,12 +8,13 @@
     <body>
         <div class="error-frame">
             <?php
-                $names = array("Masoome", "Fariba", "Hormoz", "Reza", "Azadeh");
-                sort($names);
+                $names = array("Reza" => "30", "Maroni" => "12", "Norman" => "28", "Roya" => "14", "Aghi" => "40");
+                ksort($names);
 
-                for ($i = 0; $i < count($names); $i++) {
-                    echo $names[$i] . "<br>";
+                for($i = 0; $i < count($names); $i++){
+                    echo array_keys($names)[$i] . " = " . $names[array_keys($names)[$i]] . "<br>";
                 }
+
             ?>
 
         </div>
