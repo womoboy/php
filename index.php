@@ -11,8 +11,8 @@
                 $names = array("Reza" => "30", "Maroni" => "12", "Norman" => "28", "Roya" => "14", "Aghi" => "40");
                 ksort($names);
 
-                for($i = 0; $i < count($names); $i++){
-                    echo array_keys($names)[$i] . " = " . $names[array_keys($names)[$i]] . "<br>";
+                foreach($names as $val_name => $value){
+                    echo $val_name . " = " . $value . "<br>";
                 }
 
             ?>
