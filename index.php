@@ -8,25 +8,12 @@
     <body>
         <div class="error-frame">
             <?php
-                $cars = array(
-                    array('BMW', 'Red', '1392'),
-                    array('FordMustang', 'Black', '1969'),
-                    array('Benz', 'Blue', '2020'),
-                    array('Mack', "white", '2022')
-                );
+                $names = array("Masoome", "Fariba", "Hormoz", "Reza", "Azadeh");
+                sort($names);
 
-                for ($i = 0; $i < count($cars); $i++){
-                    echo "<p>The Array $i</p>";
-                    echo "<ul>";
-                    for ($x = 0; $x < 3; $x++){
-                        echo "<li>";
-                        echo $cars[$i][$x];
-                        echo "</li>";
-                    }
-                    echo "</ul>";
-                    
+                for ($i = 0; $i < count($names); $i++) {
+                    echo $names[$i] . "<br>";
                 }
-
             ?>
 
         </div>
