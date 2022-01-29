@@ -8,12 +8,20 @@
     <body>
         <div class="error-frame">
             <?php
-                $cars = array("BMW" => "Red", "Vena" => "Black", "Benz" => "Blue");
-                // dont use this: sort($cars); because sort cant sorting truth the arrays keys and sorting by index number; so use like the blow;
-                ksort($cars);
+                $persons = array(
+                    array("Reza", "35"),
+                    array("Shenaya", "6"),
+                    array("Shahbanoo", "23"),
+                    array("Armin", "25")
+                );
                 
-                for($i = 0; $i < count($cars); $i++){
-                    echo array_keys($cars)[$i] . " = " . $cars[array_keys($cars)[$i]] . "<br>";
+                for($i = 0; $i < count($persons); $i++){
+                    echo "<p>" . "The person number : " . $i . "</p>";
+                    echo "<ul>";
+                    for($x = 0; $x < 2; $x++){
+                        echo "<li>" . $persons[$i][$x] . "</li>";
+                    }
+                    echo "</ul>";
                 }
                 
             ?>
