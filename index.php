@@ -8,13 +8,14 @@
     <body>
         <div class="error-frame">
             <?php
-                $names = array("Reza" => "30", "Maroni" => "12", "Norman" => "28", "Roya" => "14", "Aghi" => "40");
-                ksort($names);
-
-                foreach($names as $val_name => $value){
-                    echo $val_name . " = " . $value . "<br>";
+                $cars = array("BMW" => "Red", "Vena" => "Black", "Benz" => "Blue");
+                // dont use this: sort($cars); because sort cant sorting truth the arrays keys and sorting by index number; so use like the blow;
+                ksort($cars);
+                
+                for($i = 0; $i < count($cars); $i++){
+                    echo array_keys($cars)[$i] . " = " . $cars[array_keys($cars)[$i]] . "<br>";
                 }
-
+                
             ?>
 
         </div>
