@@ -9,17 +9,17 @@
         <div class="error-frame">
             <?php
                 $persons = array(
-                    array("Reza", "35"),
-                    array("Shenaya", "6"),
-                    array("Shahbanoo", "23"),
-                    array("Armin", "25")
+                    array("Reza", "35", "white"),
+                    array("Shenaya", "6", "Yellow"),
+                    array("Shahbanoo", "23", "Black"),
+                    array("Armin", "25", "Red")
                 );
                 
                 for($i = 0; $i < count($persons); $i++){
-                    echo "<p>" . "The person number : " . $i . "</p>";
+                    echo "This person number : $i" . "<br>";
                     echo "<ul>";
-                    for($x = 0; $x < 2; $x++){
-                        echo "<li>" . $persons[$i][$x] . "</li>";
+                    foreach($persons[array_keys($persons)[$i]] as $value){
+                        echo "<li>" . $value . "</li>";
                     }
                     echo "</ul>";
                 }
