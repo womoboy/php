@@ -7,25 +7,13 @@
     </head>
     <body>
         <div class="error-frame">
-            <?php
-                $persons = array(
-                    array("Reza", "35", "white"),
-                    array("Shenaya", "6", "Yellow"),
-                    array("Shahbanoo", "23", "Black"),
-                    array("Armin", "25", "Red")
-                );
-                
-                for($i = 0; $i < count($persons); $i++){
-                    echo "This person number : $i" . "<br>";
-                    echo "<ul>";
-                    foreach($persons[array_keys($persons)[$i]] as $value){
-                        echo "<li>" . $value . "</li>";
-                    }
-                    echo "</ul>";
+            <?php   
+                for($i = 0; $i < 10; $i++){
+                    $x = rand(0, 15);
+                    echo $x . "<br>";
                 }
-                
             ?>
-
+    
         </div>
 
         <form action="<?php ?>" method="post" autocomplete="FALSE">
