@@ -8,31 +8,24 @@
     <body>
         <div class="error-frame">
             <?php
-                function showMethod(){
-                    $methodName = htmlspecialchars($_SERVER['REQUEST_METHOD']);
-                    return $methodName;
+                function showFullName(){
+                    global $firstName, $lastName;
+                    return $firstName . ' ' . $lastName . "<br>";
                 }
-
-                function showFirstName(){
-                    $firstName = htmlspecialchars($_REQUEST['f-Name']);
-                    return $firstName;
-                }
-
-                function showLastName(){
-                    $lastName = htmlspecialchars($_REQUEST['l-Name']);
-                    return $lastName;
-                }
-
+                
                 function showGender(){
-                    $gender = htmlspecialchars($_REQUEST['gender']);
-                    return $gender;
+                    global $gender;
+                    return $gender . "<br>";
                 }
 
                 if($_SERVER['REQUEST_METHOD'] == "POST"){
-                    echo showMethod() . "<br>";
-                    echo showFirstName() . "<br>";
-                    echo showLastName() . "<br>";
-                    echo showGender() . "<br>";
+                    $firstName = htmlspecialchars($_REQUEST['f-Name']);
+                    $lastName = htmlspecialchars($_REQUEST['l-Name']);
+                    $gender = htmlspecialchars($_REQUEST['gender']);
+
+                    echo showFullName();
+                    echo showGender();
+                    echo $_SERVER['REQUEST_METHOD'] . "<br>";
                 }
                 
             ?>
