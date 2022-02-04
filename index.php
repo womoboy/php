@@ -7,16 +7,17 @@
     </head>
     <body>
         <div class="error-frame">
-
-
             <?php
-             
+                $x = "Reza is very good persons, Reza love the Nickola Tesla";
+                $y = "/Re(z)a/";
+                if(preg_match_all($y, $x, $string)){
+                    print_r($string);
+                }
             ?>
     
         </div>
 
         <form action="<?php $_SERVER['PHP_SELF']?>"  method="post">
-            <a href="action.php?name='Reza'&&lastName='HormozManesh'">send data with link method get</a>
             <input type="text" name="f-Name" placeholder="enter your first name">
             <input type="text" name="l-Name" placeholder="enter your last name">
             
