@@ -11,7 +11,8 @@
                 $x = "Reza is very good persons, Reza love the Nickola Tesla";
                 $y = "/Re(z)a/";
                 if(preg_match_all($y, $x, $string)){
-                    print_r($string);
+                    //print_r($string);
+                    echo $string[0][0];
                 }
             ?>
     
