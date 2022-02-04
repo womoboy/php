@@ -8,12 +8,18 @@
     <body>
         <div class="error-frame">
             <?php
-                $x = "Reza is very good persons, Reza love the Nickola Tesla";
-                $y = "/Re(z)a/";
-                if(preg_match_all($y, $x, $string)){
-                    //print_r($string);
-                    echo $string[0][0];
+                function showName(){
+                    global $x, $string, $string2;
+                    echo $string2 . "<br>";
                 }
+
+                $x = "Reza is very good persons, Reza love the Nickola Tesla";
+                $string = "/reza/i";
+                $string2 = preg_replace($string, "Sara", $x);
+
+                showName();
+                showName();
+                showName();
             ?>
     
         </div>
