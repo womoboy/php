@@ -7,32 +7,16 @@
     </head>
     <body>
         <div class="error-frame">
+
+
             <?php
-                function showFullName(){
-                    global $firstName, $lastName;
-                    return $firstName . ' ' . $lastName . "<br>";
-                }
-                
-                function showGender(){
-                    global $gender;
-                    return $gender . "<br>";
-                }
-
-                if($_SERVER['REQUEST_METHOD'] == "POST"){
-                    $firstName = htmlspecialchars($_REQUEST['f-Name']);
-                    $lastName = htmlspecialchars($_REQUEST['l-Name']);
-                    $gender = htmlspecialchars($_REQUEST['gender']);
-
-                    echo showFullName();
-                    echo showGender();
-                    echo $_SERVER['REQUEST_METHOD'] . "<br>";
-                }
-                
+             
             ?>
     
         </div>
 
-        <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+        <form action="<?php $_SERVER['PHP_SELF']?>"  method="post">
+            <a href="action.php?name='Reza'&&lastName='HormozManesh'">send data with link method get</a>
             <input type="text" name="f-Name" placeholder="enter your first name">
             <input type="text" name="l-Name" placeholder="enter your last name">
             
