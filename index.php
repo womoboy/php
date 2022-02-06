@@ -1,40 +1,34 @@
 
 <?php
-    # actions
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
         # inputs
-        $name = validInput($_POST['f-Name']);
-        $lastName = validInput($_POST['l-Name']);
-        $gender = validInput($_POST['gender']);
+        $name = validateData($_POST['f-Name']);
+        $lastName = validateData($_POST['l-Name']);
+        $gender = validateData($_POST['gender']);
 
-        if(isset($name, $lastName, $gender) && (!empty($name) && !empty($lastName) && !empty($gender))){
-            showName();
-        }
-
+        if(!empty($name) && !empty($lastName) && !empty($gender)){
+            echo showInformation();
+        }     
     }
-    
-    # functions
 
-    function validInput($data){
+    # functions
+    function validateData($data){
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
     }
 
-    function errorBox($x){
-        echo "this $x field is empty!";
+    function showInformation(){
+        global $name, $lastName, $gender;
+        $send_data_er = "your data is sended, your information is : " . "<br>";
+        return $send_data_er . $name . ' ' . $lastName . ' ' . $gender;
     }
 
     function goAddress(){
-        $target = htmlspecialchars($_SERVER['PHP_SELF']);
+        $target = validateData($_SERVER['PHP_SELF']);
         return $target;
-    }
-
-    function showName(){
-        global $name, $lastName, $gender;
-        echo $name . ' ' . $lastName . ' / ' . $gender . "<br>";
     }
 ?>
 
@@ -47,27 +41,19 @@
     <body>
         <div class="error-frame">
             <?php
-                // Required field names
-                $required = array('f-Name', 'l-Name', 'gender');
-                $errorText = " field is requred!";
-
-                // Loop over field names, make sure each one exists and is not empty
-                if($_SERVER['REQUEST_METHOD'] == "POST"){
-                    $error = " field is requared!";
-                    foreach($required as $field) {
-                        if (empty($_POST[$field])) {
-                            if($field == "f-Name"){
-                                echo "first name" . $errorText . "<br>"; 
-                            } else if($field == "l-Name"){
-                                echo "last name" . $errorText . "<br>";
-                            } else if($field == "gender"){
-                                echo "gender" . $errorText . "<br>";
-                            }
+                $inputsName = array('f-Name', 'l-Name', 'gender');
+                foreach($inputsName as $val){
+                    $field_empty_er = " fields is empty !";
+                    if($_SERVER['REQUEST_METHOD'] == "POST" && empty($_POST[$val])) {
+                        if($val == "f-Name"){
+                            echo "first name" . $field_empty_er . "<br>";
+                        } else if($val == "l-Name"){
+                            echo "last name" . $field_empty_er . "<br>";
+                        } else {
+                            echo "gender" . $field_empty_er . "<br>";
                         }
                     }
-
                 }
-                
             ?>
         </div>
 
