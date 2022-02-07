@@ -5,6 +5,7 @@ $white_smoke: rgb(180, 180, 180);
 $black: black;
 $blue-60: rgba(13, 54, 78, 0.6);
 $green: green;
+$white: white;
 
 body{
     background: linear-gradient(60deg, black, teal);
@@ -43,7 +44,7 @@ input[name="submit"]{
 }
 
 input[name="submit"]:hover {
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px $white;
 }
 
 @import 'respansive.scss';
