@@ -13,54 +13,54 @@ body {
 }
 
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(60deg, black, teal);
+  color: white;
 }
 
-.error-frame {
-  width: fit-content;
-  height: fit-content;
-  background-color: orange;
-  color: white;
-  position: fixed;
-  top: 30px;
-  left: 30px;
-  box-shadow: 0 0 1em #858585;
+p {
+  font-size: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  place-items: center;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  background-color: whitesmoke;
-  padding: 1em;
-  box-shadow: 0 0 1em #858585;
-  border-radius: 1em;
-}
-form input[type=text] {
-  width: 100%;
+  width: fit-content;
   height: fit-content;
-  padding: 0.5em;
-  margin: 0.5em 0;
-}
-form .radio-frame {
-  display: flex;
-  justify-content: space-evenly;
-  place-items: center;
-}
-form input[type=submit] {
-  background: none;
-  outline: none;
-  border: none;
-  border: 1px solid #858585;
-  color: #858585;
+  padding: 15px;
+  background-color: rgba(13, 54, 78, 0.6);
   border-radius: 1em;
-  margin: 1em 0;
-  padding: 0.5em;
+  box-shadow: 0 0 10px white;
+  flex-direction: column;
 }
-form input[type=submit]:hover {
-  color: white;
-  border: 1px solid black;
-  background-color: black;
+
+form div {
+  width: 100%;
+  margin: 10px 0;
+}
+
+input[name=submit] {
+  padding: 5px 15px;
+  border-radius: 1em;
+  border: none;
+}
+
+input[name=submit]:hover {
+  box-shadow: 0 0 10px white;
+}
+
+@media screen and (min-width: 425px) {
+  p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

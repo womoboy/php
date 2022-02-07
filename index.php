@@ -1,76 +1,26 @@
 
-<?php
 
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
-        # inputs
-        $name = validateData($_POST['f-Name']);
-        $lastName = validateData($_POST['l-Name']);
-        $gender = validateData($_POST['gender']);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Tutorial</title>
 
-        if(!empty($name) && !empty($lastName) && !empty($gender)){
-            echo showInformation();
-        }     
-    }
-
-    # functions
-    function validateData($data){
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-    function showInformation(){
-        global $name, $lastName, $gender;
-        $send_data_er = "your data is sended, your information is : " . "<br>";
-        return $send_data_er . $name . ' ' . $lastName . ' ' . $gender;
-    }
-
-    function goAddress(){
-        $target = validateData($_SERVER['PHP_SELF']);
-        return $target;
-    }
-?>
-
-<html>
-    <head>
-        <title>php tutorial</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-    <body>
-        <div class="error-frame">
-            <?php
-                $inputsName = array('f-Name', 'l-Name', 'gender');
-                foreach($inputsName as $val){
-                    $field_empty_er = " fields is empty !";
-                    if($_SERVER['REQUEST_METHOD'] == "POST" && empty($_POST[$val])) {
-                        if($val == "f-Name"){
-                            echo "first name" . $field_empty_er . "<br>";
-                        } else if($val == "l-Name"){
-                            echo "last name" . $field_empty_er . "<br>";
-                        } else {
-                            echo "gender" . $field_empty_er . "<br>";
-                        }
-                    }
-                }
-            ?>
-        </div>
-
-        <form action="<?php echo goAddress();?>"  method="post">
-            <input type="text" name="f-Name" placeholder="enter your first name">
-            <input type="text" name="l-Name" placeholder="enter your last name">
-            
-            <div class="radio-frame">
-                <span>Gender :</span>
-                <input type="radio" name="gender" value="Male" id="radio-male" checked>
-                <label for="radio-male">Male</label><br>
-                <input type="radio" name="gender" value="Female" id="radio-female">
-                <label for="radio-female">Female</label><br>
-                <input type="radio" name="gender" value="Other" id="radio-other">
-                <label for="radio-other">Other</label><br>   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <form action="" class="container" method="POST">
+            <div>
+                <input type="text" value="" name="email" id="email">
+                <label for="#email">email</label>
             </div>
-            <input type="submit" value="Submit">
+            <div class="container">
+                <input type="submit" value="submit" name="submit">
+            </div>
         </form>
-    </body>
+    </section>
+</body>
 </html>
